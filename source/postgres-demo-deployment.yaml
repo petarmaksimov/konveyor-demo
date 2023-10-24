@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    move2kube.konveyor.io/service: postgres-demo
+  name: postgres-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      move2kube.konveyor.io/service: postgres-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        move2kube.konveyor.io/service: postgres-demo
+      name: postgres-demo
+    spec:
+      containers:
+      - name: spring-boot-postgres-sample
+        env:
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                 name: postgres-secrets
+                 key: username
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                 name: postgres-secrets
+                 key: password
+          - name: POSTGRES_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: hostname-config
+                key: postgres_host
+        image: 046222885654.dkr.ecr.eu-central-1.amazonaws.com/konveyor:$IMAGE_TAG

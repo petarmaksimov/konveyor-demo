@@ -36,4 +36,4 @@ spec:
               configMapKeyRef:
                 name: hostname-config
                 key: postgres_host
-        image: 046222885654.dkr.ecr.eu-central-1.amazonaws.com/konveyor:latest
+        image: 046222885654.dkr.ecr.eu-central-1.amazonaws.com/konveyor:$IMAGE_TAG

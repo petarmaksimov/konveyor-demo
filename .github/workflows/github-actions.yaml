@@ -35,8 +35,8 @@ jobs:
         REPOSITORY: konveyor
         IMAGE_TAG: ${{ github.sha }}
       run: |
-        docker build -t $REGISTRY/$REPOSITORY:latest .
-        docker push $REGISTRY/$REPOSITORY:latest
+        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+        docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
     - name: Update kube config
       run: aws eks update-kubeconfig --name konveyor
@@ -47,9 +47,9 @@ jobs:
         k8-config-file-paths: |
           #postgres-secrets.yaml
           #postgres-storage.yaml
-          postgres-deployment.yaml
+          /yamls/postgres-deployment.yaml
           #postgres-secrets.yaml
-          postgres-demo-deployment.yaml
+          /yamls/postgres-demo-deployment.yaml
           #postgres-demo-service.yaml
         replacement-method: defined
       env:

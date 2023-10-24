@@ -1,9 +1,0 @@
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/controller/QuestionController.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/exception/ResourceNotFoundException.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/model/AuditModel.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/controller/AnswerController.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/repository/QuestionRepository.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/PostgresDemoApplication.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/repository/AnswerRepository.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/model/Answer.java
-/Users/petarmaksimov/Documents/Projects /migration/konveyor-demo/myproject/source/src/main/java/com/example/springbootpostgresrestapidemo/model/Question.java

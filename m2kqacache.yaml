@@ -1,0 +1,142 @@
+apiVersion: move2kube.konveyor.io/v1alpha1
+kind: QACache
+spec:
+  solutions:
+    - id: move2kube.transformerselector
+      type: Input
+      description: Specify a Kubernetes style selector to select only the transformers that you want to run.
+      hints:
+        - Leave empty to select everything. This is the default.
+      default: ""
+      answer: ""
+    - id: move2kube.transformers.types
+      type: MultiSelect
+      description: 'Select all transformer types that you are interested in:'
+      hints:
+        - Services that don't support any of the transformer types you are interested in will be ignored.
+      options:
+        - ArgoCD
+        - Buildconfig
+        - CNBContainerizer
+        - CloudFoundry
+        - ClusterSelector
+        - ComposeAnalyser
+        - ComposeGenerator
+        - ContainerImagesPushScriptGenerator
+        - DockerfileDetector
+        - DockerfileImageBuildScript
+        - DockerfileParser
+        - DotNetCore-Dockerfile
+        - EarAnalyser
+        - EarRouter
+        - Golang-Dockerfile
+        - Gradle
+        - Jar
+        - Jboss
+        - Knative
+        - Kubernetes
+        - KubernetesVersionChanger
+        - Liberty
+        - Maven
+        - Nodejs-Dockerfile
+        - OperatorTransformer
+        - OperatorsFromTCA
+        - PHP-Dockerfile
+        - Parameterizer
+        - Python-Dockerfile
+        - ReadMeGenerator
+        - Ruby-Dockerfile
+        - Rust-Dockerfile
+        - Tekton
+        - Tomcat
+        - WarAnalyser
+        - WarRouter
+        - WinConsoleApp-Dockerfile
+        - WinSLWebApp-Dockerfile
+        - WinWebApp-Dockerfile
+        - ZuulAnalyser
+      default:
+        - Jar
+        - WarRouter
+        - DotNetCore-Dockerfile
+        - DockerfileDetector
+        - PHP-Dockerfile
+        - WinWebApp-Dockerfile
+        - ZuulAnalyser
+        - DockerfileImageBuildScript
+        - EarAnalyser
+        - WarAnalyser
+        - Jboss
+        - Nodejs-Dockerfile
+        - Ruby-Dockerfile
+        - Liberty
+        - OperatorsFromTCA
+        - ClusterSelector
+        - Parameterizer
+        - DockerfileParser
+        - KubernetesVersionChanger
+        - Golang-Dockerfile
+        - Kubernetes
+        - Tomcat
+        - Rust-Dockerfile
+        - Buildconfig
+        - ComposeGenerator
+        - OperatorTransformer
+        - CNBContainerizer
+        - Gradle
+        - ReadMeGenerator
+        - Tekton
+        - ComposeAnalyser
+        - ContainerImagesPushScriptGenerator
+        - ArgoCD
+        - Maven
+        - CloudFoundry
+        - EarRouter
+        - Knative
+        - Python-Dockerfile
+      answer:
+        - ArgoCD
+        - Buildconfig
+        - CNBContainerizer
+        - CloudFoundry
+        - ClusterSelector
+        - ComposeAnalyser
+        - ComposeGenerator
+        - ContainerImagesPushScriptGenerator
+        - DockerfileDetector
+        - DockerfileImageBuildScript
+        - DockerfileParser
+        - DotNetCore-Dockerfile
+        - EarAnalyser
+        - EarRouter
+        - Golang-Dockerfile
+        - Gradle
+        - Jar
+        - Jboss
+        - Knative
+        - Kubernetes
+        - KubernetesVersionChanger
+        - Liberty
+        - Maven
+        - Nodejs-Dockerfile
+        - OperatorTransformer
+        - OperatorsFromTCA
+        - PHP-Dockerfile
+        - Parameterizer
+        - Python-Dockerfile
+        - ReadMeGenerator
+        - Ruby-Dockerfile
+        - Rust-Dockerfile
+        - Tekton
+        - Tomcat
+        - WarAnalyser
+        - WarRouter
+        - WinWebApp-Dockerfile
+        - ZuulAnalyser
+    - id: move2kube.spawncontainers
+      type: Confirm
+      description: Allow spawning containers?
+      hints:
+        - If this setting is set to false, those transformers that rely on containers will not work.
+      default: false
+      answer: false

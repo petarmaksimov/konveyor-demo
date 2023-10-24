@@ -45,12 +45,12 @@ jobs:
       uses: swdotcom/update-and-apply-kubernetes-configs@v1
       with:
         k8-config-file-paths: |
-          #/yamls/postgres-secrets.yaml
-          #/yamls/postgres-storage.yaml
-          /yamls/postgres-deployment.yaml
-          #/yamls/postgres-secrets.yaml
-          /yamls/postgres-demo-deployment.yaml
-          #/yamls/postgres-demo-service.yaml
+          #postgres-secrets.yaml
+          #postgres-storage.yaml
+          postgres-deployment.yaml
+          #postgres-secrets.yaml
+          postgres-demo-deployment.yaml
+          #postgres-demo-service.yaml
         replacement-method: defined
       env:
         IMAGE_TAG: ${{ github.sha }}

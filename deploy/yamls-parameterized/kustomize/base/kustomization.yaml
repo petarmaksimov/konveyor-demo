@@ -1,0 +1,3 @@
+resources:
+  - postgres-demo-deployment.yaml
+  - postgres-demo-service.yaml

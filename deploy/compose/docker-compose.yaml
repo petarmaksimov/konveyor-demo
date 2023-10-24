@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  postgres-demo:
+    container_name: postgres-demo
+    image: 046222885654.dkr.ecr.eu-central-1.amazonaws.com/konveyor/postgres-demo:latest
+    ports:
+      - target: 8080
+        published: 8080

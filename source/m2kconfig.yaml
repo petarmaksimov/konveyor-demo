@@ -1,0 +1,43 @@
+move2kube:
+  spawncontainers: false
+  transformers:
+    types:
+      - ArgoCD
+      - Buildconfig
+      - CNBContainerizer
+      - CloudFoundry
+      - ClusterSelector
+      - ComposeAnalyser
+      - ComposeGenerator
+      - ContainerImagesPushScriptGenerator
+      - DockerfileDetector
+      - DockerfileImageBuildScript
+      - DockerfileParser
+      - DotNetCore-Dockerfile
+      - EarAnalyser
+      - EarRouter
+      - Golang-Dockerfile
+      - Gradle
+      - Jar
+      - Jboss
+      - Knative
+      - Kubernetes
+      - KubernetesVersionChanger
+      - Liberty
+      - Maven
+      - Nodejs-Dockerfile
+      - OperatorTransformer
+      - OperatorsFromTCA
+      - PHP-Dockerfile
+      - Parameterizer
+      - Python-Dockerfile
+      - ReadMeGenerator
+      - Ruby-Dockerfile
+      - Rust-Dockerfile
+      - Tekton
+      - Tomcat
+      - WarAnalyser
+      - WarRouter
+      - WinWebApp-Dockerfile
+      - ZuulAnalyser
+  transformerselector: ""
